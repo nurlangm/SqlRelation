@@ -1,0 +1,19 @@
+﻿@using SQLRelations
+@using SQLRelations.Models
+@model Group
+@{
+    ViewData["Title"] = "Index";
+}
+<div style="text-align:center" class="Group-Students">
+    <div sty style="height:35px; display:flex; justify-content:center; align-items:center; background-color:aquamarine" class="Group">Group Number:@Model.GroupNo</div>
+    <p style="text-align:center;">Students</p>
+    @foreach (Student stu in Model.Students)
+    {
+        <div style="background-color:antiquewhite; margin-top:5px;" class="Students">
+            <div>Student:@stu.Name @stu.Surname</div>
+            <div>Email:@stu.Email</div>
+            <div>Grade:@stu.Grade</div>
+        </div>
+    }
+</div>
+
